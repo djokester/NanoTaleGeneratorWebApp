@@ -1,3 +1,4 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,19 +8,19 @@
 <script>
 
 var Quotes = ['Thousands of candles can be lighted from a single candle, and the life of the candle will not be shortened. Happiness never decreases by being shared.','Happiness is the art of never holding in your mind the memory of any unpleasant thing that has passed.','To be happy, we must not be too concerned with others.','Change your thoughts and you change your world.','hello'];
+  
   function newQuote(){
-  var RandomNumber = Math.floor(Math.random())*Quotes.length;
-  $("#QuoteDisplay").text(Quotes[RandomNumber]);
+    var RandomNumber = Math.floor(Math.random()*Quotes.length);
+    $("#QuoteDisplay").text(Quotes[RandomNumber]);
   }
+  
   </script>
   </head>
   <h5>
   Simple Quote Generator
   </h5>
   <body>
-<p id = "QuoteDisplay">
-
-</p>
+  <p id = "QuoteDisplay"></p>
   <button onclick="newQuote()">New Quote!</button>
 
 </body>  
