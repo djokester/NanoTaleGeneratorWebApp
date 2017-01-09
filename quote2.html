@@ -1,0 +1,54 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Quote Gen</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script>
+var Quotes = ['Thousands of candles can be lighted from a single candle, and the life of the candle will not be shortened. Happiness never decreases by being shared.','Happiness is the art of never holding in your mind the memory of any unpleasant thing that has passed.','To be happy, we must not be too concerned with others.','Change your thoughts and you change your world.','hello'];
+
+var Colours = ['#EC7063','#AF7AC5','#3498DB','#1ABC9C','#F4D03F','#D35400','#BDC3C7'];
+var Colours2 = ['#641E16','#512E5F','#154360', '#0B5345', '#7E5109', '#6E2C00', '#7B7D7D'];
+  
+  function newQuote(){
+    var RandomNumber = Math.floor(Math.random()*Quotes.length);
+    $("#QuoteDisplay").text(Quotes[RandomNumber]);
+ $(".wrapper").css("background-color",Colours[Math.floor(Math.random()*Colours.length)]);
+  $("body").css("background-color",Colours2[Math.floor(Math.random()*Colours2.length)]);
+  }
+
+</script>
+    
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Aref+Ruqaa');
+@import url('https://fonts.googleapis.com/css?family=Damion');
+
+#QuoteDisplay{
+font-family: 'Aref Ruqaa', serif;
+font-size:180%;
+}
+
+.wrapper{
+  margin:10%;
+  background-color: blue;
+  padding: 2%;
+  border-radius: 10%;
+}
+
+.btn-lg{
+  background-color:rgba(0,0,0, 0.8);
+  color: white;
+  font-family: 'Damion', cursive;
+  font-size:170%;
+}
+</style>
+</head>
+<body>
+    <div class="wrapper text-center">  
+<p id = "QuoteDisplay">Remember Wilde asked us not to remember the details, because they're always vulgar? So, to forget time, to forgive people, to live at peace, exclude the elaborations.Read snippets!</p>
+  <button class="btn-lg" onclick="newQuote()">New Quote!</button>
+    </div>  
+
+</body>  
+</html>
