@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Quote Gen</title>
+<title>Quote Gen</title>
+
+<script src="jquery-3.1.1.min.js"></script>
 <script>
-var Quotes = ['Thousands of candles can be lighted from a single candle, and the life of the candle will not be shortened. Happiness never decreases by being shared.','Happiness is the art of never holding in your mind the memory of any unpleasant thing that has passed.','To be happy, we must not be too concerned with others.'
-];
-function newQuote(){
-var RandomNumber = Math.floor(Math.random())*Quotes.length;
 
-document.getElementById('QuoteDisplay').innerHTML = Quotes[RandomNumber];}
-</script>
-</head>
-<h5>
+var Quotes = ['Thousands of candles can be lighted from a single candle, and the life of the candle will not be shortened. Happiness never decreases by being shared.','Happiness is the art of never holding in your mind the memory of any unpleasant thing that has passed.','To be happy, we must not be too concerned with others.','Change your thoughts and you change your world.','hello'];
+  function newQuote(){
+  var RandomNumber = Math.floor(Math.random())*Quotes.length;
+  $("#QuoteDisplay").text(Quotes[RandomNumber]);
+  }
+  </script>
+  </head>
+  <h5>
   Simple Quote Generator
-</h5>
-<body>
-  
-<div id = "QuoteDisplay">
+  </h5>
+  <body>
+<p id = "QuoteDisplay">
 
-</div>
+</p>
   <button onclick="newQuote()">New Quote!</button>
 
 </body>  
